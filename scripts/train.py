@@ -87,6 +87,7 @@ def run_experiment():
             print("Error opening specified variant json at: {}. "
                   "Please check filepath and try again.".format(variant))
 
+        variant["seed"] = args.seed
         # Set logging
         tmp_file_prefix = "{}_{}_{}_SEED{}".format(variant["expl_environment_kwargs"]["env_name"],
                                                    "".join(variant["expl_environment_kwargs"]["robots"]),
